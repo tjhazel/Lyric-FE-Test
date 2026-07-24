@@ -1,0 +1,105 @@
+/* Sketch: 306px sidebar, Inter fonts, #007264 headings, #9C9C9C body */
+
+.panel {
+  padding: 28px 20px 32px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+/* Sketch: Inter Bold 20px, #007264 */
+.title {
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #007264;
+  line-height: 1.3;
+  white-space: nowrap;
+  flex: 1;
+  margin: 0 8px 0 0;
+}
+
+/* Sketch: Inter Regular 16px, #9C9C9C, 27px line-height */
+.body {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #9C9C9C;
+  line-height: 27px;
+}
+
+.body p {
+  margin: 0 0 16px;
+}
+
+.body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Sketch: 306×112px, border-radius 10px, background #181818 */
+.coming {
+  margin-top: 28px;
+  width: 306px;
+  border-radius: 10px;
+  background: #181818;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.comingIcon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comingText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.comingLabel {
+  font-family: Inter, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: rgba(0, 114, 100, 1);
+  line-height: 35px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.comingCaption {
+  font-family: Inter, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #9C9C9C;
+  line-height: 1.3;
+  max-width: 180px;
+  margin: 0;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: #9C9C9C;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 4px;
+  transition: color 0.15s ease;
+}
+
+.closeBtn:hover {
+  color: #CBCBCB;
+}

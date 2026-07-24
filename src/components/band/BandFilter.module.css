@@ -1,0 +1,113 @@
+/* Sketch: pills 38px tall, 19px radius, Inter Regular 18px, #CBCBCB labels */
+
+.pill {
+  height: 38px;
+  border-radius: 19px;
+  border: none;
+  padding: 0 18px;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #CBCBCB;
+  background: #181818; /* inactive = page background */
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease, color 0.15s ease;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.pill:hover {
+  background: #252525;
+}
+
+.pillActive {
+  width: 89px;
+  background: rgba(0, 114, 100, 1);
+  color: #fff;
+  font-weight: 400;
+  justify-content: center;
+}
+
+.pillActive:hover {
+  background: #00866f;
+}
+
+.pillGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.drawerPillGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.drawerPillGroup .pill {
+  width: 100%;
+  justify-content: center;
+}
+
+.drawerSearch {
+  margin-top: 20px;
+}
+
+.drawerSearch .searchWrap {
+  max-width: none;
+  margin-left: 0;
+}
+
+.drawerSearch .search {
+  width: 100%;
+}
+
+/* Sketch: search pill 200×36px, radius 18px, #181818 bg, magnifier in #484848 */
+.search {
+  height: 36px;
+  border-radius: 18px;
+  background: #181818;
+  border: none;
+  color: #CBCBCB;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  padding: 0 14px 0 36px;
+  width: 200px;
+  flex-shrink: 0;
+  outline: none;
+  margin-left: 4px;
+}
+
+.search::placeholder {
+  color: #484848;
+}
+
+.searchWrap {
+  position: relative;
+  flex-shrink: 0;
+  flex: 1;
+  margin-left: 4px;
+  max-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .searchWrap {
+    max-width: none;
+  }
+
+  .search {
+    width: 100%;
+  }
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #484848;
+  pointer-events: none;
+}

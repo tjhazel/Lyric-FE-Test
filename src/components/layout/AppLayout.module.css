@@ -1,0 +1,154 @@
+/* ── Two-column root ─────────────────────────────────────────── */
+/* Design: 1730px canvas, 28px left margin, 1267px left col,
+   65px gutter, 306px sidebar, ~64px right margin              */
+
+.root {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 100vh;
+  max-width: 1680px;
+  margin: 0 auto;
+  padding: 28px 64px 40px 28px;
+  gap: 28px;
+  box-sizing: border-box;
+}
+
+/* ── Left column ─────────────────────────────────────────────── */
+
+.leftCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+
+/* Header bar: 1267×89px, #0F0F0F, radius 10px per Sketch */
+.header {
+  display: flex;
+  align-items: center;
+  height: 89px;
+  overflow: visible;
+  background: #0F0F0F;
+  border-radius: 10px;
+  padding: 0 24px 0 33px;
+  gap: 16px;
+  flex-shrink: 0;
+  margin-bottom: 32px;
+}
+
+.logoImg {
+  width: 163px;
+  height: 105px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+/* Filter pills + search — fills space between logo and icons */
+.filterRow {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.filterRow::-webkit-scrollbar {
+  display: none;
+}
+
+/* Icon buttons at far right of header */
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 270px;
+  height: 42px;
+  gap: 11px;
+  flex-shrink: 0;
+  color: rgba(203, 203, 203, 1);
+}
+
+.icons svg {
+  width: 29px;
+  height: 29px;
+}
+
+/* Card grid area */
+.main {
+  flex: 1;
+}
+
+/* ── Right column / sidebar ──────────────────────────────────── */
+/* Sketch: 306px wide, pure content, no header section          */
+
+.rightCol {
+  width: 374px;
+  flex-shrink: 0;
+  background: rgba(15, 15, 15, 1);
+  border-radius: 10px;
+  transition: width 0.25s ease, opacity 0.25s ease;
+  align-self: flex-start;
+}
+
+.rightColCollapsed {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+
+/* ── Responsive ──────────────────────────────────────────────── */
+
+@media (max-width: 1200px) {
+  .root {
+    padding-right: 28px;
+  }
+
+  .rightCol {
+    width: 300px;
+  }
+}
+
+@media (max-width: 991px) {
+  .rightCol {
+    display: none;
+  }
+
+  .root {
+    padding-right: 28px;
+    gap: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .root {
+    padding: 16px 16px 32px;
+  }
+
+  .header {
+    height: 64px;
+    padding: 0 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  .logoImg {
+    width: 102px;
+    height: 66px;
+  }
+
+}
+
+@media (max-width: 599px) {
+  .header {
+    gap: 8px;
+  }
+
+  .search {
+    width: 100%;
+  }
+}
