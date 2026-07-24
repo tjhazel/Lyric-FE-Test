@@ -99,3 +99,14 @@ src/
 
 - All design values (colours, spacing, typography) are taken directly from the provided Sketch file via the Inspect panel
 - AI tooling was used throughout development in accordance with the take-home guidelines
+
+### Icon substitutions
+
+The Sketch design references two icons from Apple's SF Symbols library, which is proprietary and not licensed for web use. Equivalent icons from [@tabler/icons-react](https://tabler.io/icons) were used instead:
+
+| Location | Sketch original | Substitute |
+|---|---|---|
+| Coming Soon block | SF Symbols `flag.2.crossed` (dual crossed pennant flags) | `IconFlag` |
+| Header actions | SF Symbols service/bicycle gear | `IconSettings` |
+
+Both substitutes are visually consistent with the design intent and carry no copyright restrictions.  The remaining header icons (`IconBell`, `IconMessageCircle`) are direct Tabler equivalents with no SF Symbols conflict.
